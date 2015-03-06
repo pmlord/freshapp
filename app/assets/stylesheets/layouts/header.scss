@@ -1,0 +1,30 @@
+#header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: $base-border;
+  > div { @include outer-container; }
+  #logo {
+    float: left;
+    line-height: 40px;
+    font-size: 16pt;
+    &, &:hover, &:active, &:visited { color: black; }
+  }
+}
+
+#header-links {
+  float: right;
+  
+  %text { line-height: 40px }
+  
+  #logout {
+    margin-left: 15px;
+    color: black;
+    &:hover { color: $blue; }
+  }
+  #email { @extend %text; }
+  #login { margin-right: 5px; }
+  #signup {
+    @include button($green);
+    margin-left: 5px;
+  }
+}

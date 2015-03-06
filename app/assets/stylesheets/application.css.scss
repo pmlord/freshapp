@@ -1,7 +1,11 @@
 
 @import 'normalize';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import 'bourbon';
 @import 'base/base';
 @import 'neat';
-@import "font-awesome-sprockets";
-@import "font-awesome";
+@import 'refills/*';
+@import 'components/*';
+@import 'layouts/*';
+@import 'pages/*';

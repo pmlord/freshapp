@@ -76,3 +76,21 @@ select {
   max-width: 100%;
   width: auto;
 }
+
+
+
+// Custon additions
+
+.error { color: $red; }
+.hint {
+  color: $medium-gray;
+  font-size: .9em;
+}
+
+form {
+  .error, .hint {
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+}

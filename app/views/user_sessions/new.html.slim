@@ -1,0 +1,9 @@
+#user_login
+  
+  h1 Login
+  = simple_form_for :user, url: user_sessions_path do |f|
+    - if @login_failed
+      .login-error Incorrect username or password
+    = f.input :email
+    = f.input :password
+    = f.button :submit, 'Sign in'

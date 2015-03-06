@@ -1,0 +1,5 @@
+
+#user_login {
+  @extend %simple_centered_form;
+  .login-error { @extend .flash-error }
+}
