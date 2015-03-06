@@ -14,7 +14,7 @@ module Avatar
     email_address.downcase!
     hash = Digest::MD5.hexdigest(email_address)
     px = size.is_a?(Symbol) ? pixel_size(size) : size
-    "http://www.gravatar.com/avatar/#{hash}?s=#{px}"
+    "http://www.gravatar.com/avatar/#{hash}?s=#{px}&d=identicon"
   end
   
 end
