@@ -7,7 +7,7 @@ class UserSessionsController < ApplicationController
   end
   
   def create
-    if user = login(params[:user][:email], params[:user][:password])
+    if user = login(login_params[:email], login_params[:password], login_params[:remember_me])
       redirect_back_or_to root_path
     else
       @login_failed = true
@@ -18,6 +18,13 @@ class UserSessionsController < ApplicationController
   def destroy
     logout
     redirect_to root_path
+  end
+  
+  
+  private
+  
+  def login_params
+    params.require(:user)
   end
   
 end

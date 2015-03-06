@@ -81,7 +81,7 @@ select {
 
 // Custon additions
 
-.error { color: $red; }
+.error { color: $danger-color; }
 .hint {
   color: $medium-gray;
   font-size: .9em;

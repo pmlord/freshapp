@@ -19,12 +19,13 @@
   #logout {
     margin-left: 15px;
     color: black;
-    &:hover { color: $blue; }
+    &:hover { color: $action-color; }
   }
   #email { @extend %text; }
   #login { margin-right: 5px; }
   #signup {
-    @include button($green);
+    @include button($secondary-action-color);
     margin-left: 5px;
   }
 }
+
