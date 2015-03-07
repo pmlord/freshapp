@@ -15,24 +15,24 @@
 #header-links {
   float: right;
   
-  %text { line-height: 40px }
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+    &:not(:first-child) { margin-left: 15px; }
+    &:not(.squish), &.squish > * { line-height: 40px; }
+  }
+  > .squish *:not(:first-child) { margin-left: 10px; }
   
   .avatar {
     height: 30px; width: 30px;
-    margin-right: 15px;
-    vertical-align: middle;
   }
-  
   #logout {
-    margin-left: 15px;
     color: black;
     &:hover { color: $action-color; }
   }
-  #email { @extend %text; }
-  #login { margin-right: 5px; }
   #signup {
     @include button($secondary-action-color);
-    margin-left: 5px;
+    line-height: inherit;
   }
 }
 
