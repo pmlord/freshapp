@@ -14,7 +14,9 @@ Rails.application.routes.draw do
 
 
 
-
+  if Rails.env.development?
+    get '/dev/:dir/:file' => 'dev#index'
+  end
 
 
 
